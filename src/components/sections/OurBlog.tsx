@@ -32,9 +32,10 @@ const OurBlog = () => {
     },
   ];
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="flex justify-end">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-0">
+      <div className="flex justify-end relative top-28 right-28">
         <div
+          className="md:block hidden"
           style={{
             width: "105px",
             height: "100px",
@@ -60,7 +61,7 @@ const OurBlog = () => {
         </span>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-2 pt-12">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-2 pt-6 md:pt-12">
         {blogs.map((blog) => {
           const formattedDate = new Date(blog.date).toLocaleDateString(
             "en-US",
@@ -72,9 +73,7 @@ const OurBlog = () => {
           );
 
           return (
-            <div
-              key={blog.id}
-              className="overflow-hidden border h-96 flex flex-col justify-end items-center p-4">
+            <div key={blog.id} className="overflow-hidden flex flex-col p-4">
               {/* Image */}
               <Image
                 src={blog.image}
