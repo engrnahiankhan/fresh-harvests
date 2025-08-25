@@ -1,0 +1,348 @@
+[
+  {
+    "id": 1,
+    "slug": "mushroom-fresh-veg-1",
+    "name": "Mushroom",
+    "images": ["/images/prod-8.png", "/images/prod-8.png"],
+    "price": 2.3,
+    "category": "vegetables",
+    "rating": 5,
+    "description": "These fresh organic mushrooms are handpicked daily to ensure maximum freshness and flavor. They are versatile ingredients that can be used in soups, salads, pizzas, and stir-fries. Mushrooms are known for their earthy taste and rich texture, making them a perfect choice for vegetarian and non-vegetarian dishes alike. They are also packed with essential vitamins, minerals, and antioxidants. Add these mushrooms to your meals to enjoy both taste and health benefits in one.",
+    "review_count": 2,
+    "reviews": [
+      {
+        "id": 1,
+        "username": "John Doe",
+        "user_img": "/images/john-doe.png",
+        "review_text": "Best product I have ever bought!"
+      },
+      {
+        "id": 2,
+        "username": "Sarah Lee",
+        "user_img": "/images/sarah.png",
+        "review_text": "Very fresh and tasty mushrooms."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "mustard-green-leaves-2",
+    "name": "Mustard",
+    "images": ["/images/prod-7.png", "/images/prod-7.png"],
+    "price": 1.5,
+    "category": "vegetables",
+    "rating": 4,
+    "description": "Fresh mustard greens with a tangy and slightly spicy flavor that can elevate any dish. They are perfect for adding to stir-fries, curries, and salads, bringing both taste and nutrition to the table. Mustard leaves are packed with vitamins A, C, and K, along with minerals like calcium and potassium. Their vibrant green color and natural crunch make them a favorite among health-conscious people. Enjoy them raw in salads or lightly cooked for a delicious side dish.",
+    "review_count": 1,
+    "reviews": [
+      {
+        "id": 1,
+        "username": "Alex Kim",
+        "user_img": "/images/alex.png",
+        "review_text": "Perfect for salad mixes!"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "orange-juicy-fruit-3",
+    "name": "Orange",
+    "images": ["/images/prod-6.png", "/images/prod-6.png"],
+    "price": 3.2,
+    "category": "fruits",
+    "rating": 5,
+    "description": "These oranges are naturally sweet and bursting with juice, making them perfect for a refreshing snack. Oranges are loaded with Vitamin C, which helps boost immunity and keeps you energized. Their bright citrus flavor can be enjoyed fresh, juiced, or added to desserts and salads. Each orange is carefully selected to provide the highest quality and freshness. Add them to your daily diet for a delicious way to stay healthy and hydrated.",
+    "review_count": 2,
+    "reviews": [
+      {
+        "id": 1,
+        "username": "Maria Garcia",
+        "user_img": "/images/maria.png",
+        "review_text": "Very sweet and fresh oranges."
+      },
+      {
+        "id": 2,
+        "username": "David Park",
+        "user_img": "/images/david.png",
+        "review_text": "Loved the quality, worth the price."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "slug": "pomegranate-red-fruit-4",
+    "name": "Pomegranate",
+    "images": ["/images/prod-5.png", "/images/prod-5.png"],
+    "price": 4.0,
+    "category": "fruits",
+    "rating": 4,
+    "description": "Pomegranates are a rich source of antioxidants, vitamins, and minerals that promote overall health. Each fruit is filled with juicy red arils that are sweet and tangy in flavor. They can be eaten fresh, used in juices, or sprinkled over salads for an extra burst of freshness. Pomegranates are known to support heart health and improve digestion. Enjoy their unique taste while boosting your nutrition with every bite.",
+    "review_count": 1,
+    "reviews": [
+      {
+        "id": 1,
+        "username": "Nina Patel",
+        "user_img": "/images/nina.png",
+        "review_text": "Juicy and healthy fruit."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "slug": "kiwi-green-fruit-5",
+    "name": "Kiwi",
+    "images": ["/images/prod-4.png", "/images/prod-4.png"],
+    "price": 3.5,
+    "category": "fruits",
+    "rating": 5,
+    "description": "Kiwis are tropical fruits with a tangy-sweet taste and bright green flesh. They are rich in Vitamin C, fiber, and antioxidants, making them an excellent choice for a healthy diet. Their unique flavor pairs well with smoothies, desserts, and fresh salads. The small seeds add a delightful crunch, enhancing the eating experience. These kiwis are carefully selected to ensure premium quality, freshness, and taste in every bite.",
+    "review_count": 2,
+    "reviews": [
+      {
+        "id": 1,
+        "username": "Tommy Lee",
+        "user_img": "/images/tommy.png",
+        "review_text": "Amazing taste and freshness."
+      },
+      {
+        "id": 2,
+        "username": "Emma Watson",
+        "user_img": "/images/emma.png",
+        "review_text": "Best kiwis I’ve had in years."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "slug": "coconut-fresh-fruit-6",
+    "name": "Coconut",
+    "images": ["/images/prod-3.png", "/images/prod-3.png"],
+    "price": 2.8,
+    "category": "fruits",
+    "rating": 4,
+    "description": "Fresh coconuts filled with sweet, refreshing water and creamy white flesh. They are perfect for hydrating drinks, tropical dishes, and desserts. Coconut water is naturally rich in electrolytes, making it a great post-workout beverage. The coconut flesh provides healthy fats and nutrients that support overall wellness. Add coconuts to your diet for a delicious and healthy tropical experience.",
+    "review_count": 1,
+    "reviews": [
+      {
+        "id": 1,
+        "username": "Rajesh Kumar",
+        "user_img": "/images/rajesh.png",
+        "review_text": "Refreshing coconut water!"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "slug": "guava-sweet-fruit-7",
+    "name": "Guava",
+    "images": ["/images/prod-2.png", "/images/prod-2.png"],
+    "price": 2.0,
+    "category": "fruits",
+    "rating": 5,
+    "description": "Guavas are tropical fruits known for their sweet taste and fragrant aroma. They are packed with Vitamin C, fiber, and antioxidants that help strengthen the immune system. Guavas can be eaten fresh, juiced, or used in jams and desserts. Their unique texture and flavor make them a popular choice among fruit lovers. Enjoy the goodness of guava as a refreshing and nutritious addition to your meals.",
+    "review_count": 2,
+    "reviews": [
+      {
+        "id": 1,
+        "username": "Sophia Wong",
+        "user_img": "/images/sophia.png",
+        "review_text": "Delicious and juicy guavas."
+      },
+      {
+        "id": 2,
+        "username": "Michael Smith",
+        "user_img": "/images/michael.png",
+        "review_text": "Perfectly ripe and sweet."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "slug": "eggplant-fresh-veg-8",
+    "name": "Eggplant",
+    "images": ["/images/prod-1.png", "/images/prod-1.png"],
+    "price": 1.8,
+    "category": "vegetables",
+    "rating": 4,
+    "description": "Eggplants are versatile vegetables with a rich, slightly sweet taste and smooth texture. They are perfect for curries, stir-fries, grilling, and even roasting. Eggplants are rich in dietary fiber, vitamins, and minerals that support heart and digestive health. Their vibrant purple color adds beauty to your dishes while providing powerful antioxidants. Add eggplants to your kitchen for both flavor and nutrition.",
+    "review_count": 1,
+    "reviews": [
+      {
+        "id": 1,
+        "username": "Linda Johnson",
+        "user_img": "/images/linda.png",
+        "review_text": "Good quality and fresh."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "slug": "apple-crisp-fruit-9",
+    "name": "Apple",
+    "images": ["/images/prod-9.jpg", "/images/prod-9.jpg"],
+    "price": 3.0,
+    "category": "fruits",
+    "rating": 5,
+    "description": "Crisp, juicy apples that are freshly picked to ensure top-notch quality. Apples are known for their natural sweetness and crunchy bite, making them a favorite snack worldwide. They are rich in fiber, Vitamin C, and antioxidants that support heart and digestive health. Apples can be eaten fresh, sliced into salads, or baked into delicious desserts. Enjoy apples daily for a tasty and healthy treat that never goes out of style.",
+    "review_count": 2,
+    "reviews": [
+      {
+        "id": 1,
+        "username": "Jack Miller",
+        "user_img": "/images/jack.png",
+        "review_text": "Best apples I’ve had in a while."
+      },
+      {
+        "id": 2,
+        "username": "Olivia Brown",
+        "user_img": "/images/olivia.png",
+        "review_text": "Very fresh and tasty."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "slug": "banana-sweet-fruit-10",
+    "name": "Banana",
+    "images": ["/images/prod-10.jpg", "/images/prod-10.jpg"],
+    "price": 1.2,
+    "category": "fruits",
+    "rating": 4,
+    "description": "Sweet and ripe bananas that provide instant energy and natural sweetness. Bananas are high in potassium, making them excellent for maintaining heart health and muscle function. They are perfect for breakfast smoothies, snacks, or baking. Their soft texture and sweet flavor make them kid-friendly and highly versatile. Add bananas to your daily meals for a natural boost of nutrition and flavor.",
+    "review_count": 1,
+    "reviews": [
+      {
+        "id": 1,
+        "username": "Chris Evans",
+        "user_img": "/images/chris.png",
+        "review_text": "Perfect snack on the go!"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "slug": "strawberry-sweet-fruit-11",
+    "name": "Strawberry",
+    "images": ["/images/prod-11.jpg", "/images/prod-11.jpg"],
+    "price": 4.5,
+    "category": "fruits",
+    "rating": 5,
+    "description": "Fresh strawberries that are sweet, juicy, and bursting with flavor. These berries are perfect for desserts, smoothies, and salads. They are rich in Vitamin C, antioxidants, and fiber, supporting overall health and wellness. Their bright red color and delightful aroma make them a favorite for both kids and adults. Indulge in the natural sweetness of strawberries any time of the year.",
+    "review_count": 2,
+    "reviews": [
+      {
+        "id": 1,
+        "username": "Sophia Kim",
+        "user_img": "/images/sophia-k.png",
+        "review_text": "So fresh and delicious!"
+      },
+      {
+        "id": 2,
+        "username": "Daniel Lee",
+        "user_img": "/images/daniel.png",
+        "review_text": "Very sweet, kids loved it."
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "slug": "lettuce-fresh-salad-12",
+    "name": "Lettuce",
+    "images": ["/images/prod-12.jpg", "/images/prod-12.jpg"],
+    "price": 1.0,
+    "category": "salad",
+    "rating": 4,
+    "description": "Crisp and fresh lettuce leaves that are perfect for salads, sandwiches, and wraps. Lettuce is naturally low in calories and high in hydration, making it an excellent choice for weight management. It provides essential vitamins like Vitamin K and Vitamin A, supporting healthy bones and vision. Its light, refreshing crunch adds texture and flavor to any dish. Keep your meals healthy and fresh with this essential salad green.",
+    "review_count": 1,
+    "reviews": [
+      {
+        "id": 1,
+        "username": "Anna White",
+        "user_img": "/images/anna.png",
+        "review_text": "Very crisp and fresh."
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "slug": "cucumber-fresh-salad-13",
+    "name": "Cucumber",
+    "images": ["/images/prod-13.jpg", "/images/prod-13.jpg"],
+    "price": 1.3,
+    "category": "salad",
+    "rating": 4,
+    "description": "Cool and refreshing cucumbers with a natural crunch. They are hydrating, low in calories, and rich in antioxidants, making them perfect for a healthy diet. Cucumbers are great for salads, sandwiches, or simply as a light snack. Their subtle flavor makes them easy to combine with other vegetables and fruits. Enjoy cucumbers daily for both taste and nutrition.",
+    "review_count": 1,
+    "reviews": [
+      {
+        "id": 1,
+        "username": "Ethan Scott",
+        "user_img": "/images/ethan.png",
+        "review_text": "Crisp and juicy cucumbers."
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "slug": "spinach-green-salad-14",
+    "name": "Spinach",
+    "images": ["/images/prod-14.jpg", "/images/prod-14.jpg"],
+    "price": 2.2,
+    "category": "salad",
+    "rating": 5,
+    "description": "Nutritious spinach leaves that are fresh, green, and packed with health benefits. Spinach is loaded with iron, calcium, and vitamins A, C, and K. It is a versatile leafy green that can be used in salads, soups, smoothies, and cooked dishes. Known as a superfood, spinach supports strong bones, healthy skin, and better immunity. Make spinach a part of your daily meals for a boost of natural nutrition.",
+    "review_count": 2,
+    "reviews": [
+      {
+        "id": 1,
+        "username": "Mark Wilson",
+        "user_img": "/images/mark.png",
+        "review_text": "Great quality spinach!"
+      },
+      {
+        "id": 2,
+        "username": "Isabella Davis",
+        "user_img": "/images/isabella.png",
+        "review_text": "Very fresh and green."
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "slug": "carrot-fresh-veg-15",
+    "name": "Carrot",
+    "images": ["/images/prod-15.jpg", "/images/prod-15.jpg"],
+    "price": 1.7,
+    "category": "vegetables",
+    "rating": 5,
+    "description": "Crunchy and vibrant orange carrots full of natural sweetness. Carrots are a rich source of beta-carotene, fiber, and essential vitamins that support eye health and overall wellness. They can be eaten raw, juiced, or cooked into a variety of dishes. Their crisp texture makes them a favorite snack for both kids and adults. Add carrots to your diet for a colorful and nutritious boost.",
+    "review_count": 1,
+    "reviews": [
+      {
+        "id": 1,
+        "username": "Ben Carter",
+        "user_img": "/images/ben.png",
+        "review_text": "Very crunchy and tasty."
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "slug": "broccoli-green-veg-16",
+    "name": "Broccoli",
+    "images": ["/images/prod-16.jpg", "/images/prod-16.jpg"],
+    "price": 2.9,
+    "category": "vegetables",
+    "rating": 4,
+    "description": "Fresh green broccoli florets packed with vitamins, minerals, and antioxidants. Broccoli is considered one of the healthiest vegetables, supporting immunity and digestion. It can be steamed, stir-fried, roasted, or added to soups and pasta dishes. Its slightly bitter yet earthy flavor pairs well with a wide range of foods. Add broccoli to your meals for a powerhouse of nutrition and taste.",
+    "review_count": 1,
+    "reviews": [
+      {
+        "id": 1,
+        "username": "Emily Clark",
+        "user_img": "/images/emily.png",
+        "review_text": "Very healthy and fresh."
+      }
+    ]
+  }
+]
