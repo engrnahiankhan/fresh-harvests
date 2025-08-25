@@ -7,6 +7,7 @@ import { ProductsType } from "@/types/products.types";
 import Image from "next/image";
 import { useEffect, useMemo } from "react";
 import Badge from "../ui/badge";
+import Link from "next/link";
 
 const ProductSection = () => {
   const dispatch = useAppDispatch();
@@ -41,7 +42,9 @@ const ProductSection = () => {
   const ProductGrid = ({ products }: { products: ProductsType }) => (
     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
       {products.map((prod) => (
-        <div
+        <Link
+          target="_blank"
+          href={`/product-details/${prod.slug}`}
           key={prod.id}
           className="bg-white shadow-sm rounded-xl p-2 sm:p-3 overflow-hidden text-center cursor-pointer hover:scale-105 transition-all duration-200 hover:shadow-lg space-y-3 sm:space-y-4">
           <Image
@@ -60,7 +63,7 @@ const ProductSection = () => {
           <button className="rounded-lg py-2 sm:py-3 w-full font-rubik font-normal text-sm sm:text-lg text-custom-black border cursor-pointer hover:border-primary hover:bg-primary hover:text-white transition-all duration-200 mb-2">
             Add to cart
           </button>
-        </div>
+        </Link>
       ))}
     </div>
   );

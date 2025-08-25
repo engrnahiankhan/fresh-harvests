@@ -5,11 +5,6 @@ export interface Review {
   review_text: string;
 }
 
-export interface Reviews {
-  review_count: number;
-  reviewers: Review[];
-}
-
 export interface Product {
   id: number;
   slug: string;
@@ -19,7 +14,8 @@ export interface Product {
   category: "fruits" | "vegetables" | "salad";
   rating: number;
   description: string;
-  reviews: Reviews;
+  review_count: number;
+  reviews: Review[];
 }
 
 export type ProductsType = Product[];
