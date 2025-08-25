@@ -6,6 +6,7 @@ import { fetchProducts } from "@/redux/productSlice";
 import { ProductsType } from "@/types/products.types";
 import Image from "next/image";
 import { useEffect, useMemo } from "react";
+import Badge from "../ui/badge";
 
 const ProductSection = () => {
   const dispatch = useAppDispatch();
@@ -38,27 +39,25 @@ const ProductSection = () => {
   }, [data]);
 
   const ProductGrid = ({ products }: { products: ProductsType }) => (
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
       {products.map((prod) => (
         <div
           key={prod.id}
-          className="bg-white shadow-sm rounded-xl p-3 overflow-hidden text-center cursor-pointer hover:scale-105 transition-all duration-200 hover:shadow-lg space-y-4">
+          className="bg-white shadow-sm rounded-xl p-2 sm:p-3 overflow-hidden text-center cursor-pointer hover:scale-105 transition-all duration-200 hover:shadow-lg space-y-3 sm:space-y-4">
           <Image
             width={258}
             height={208}
             src={prod.images[1] || "/placeholder.svg"}
             alt={`Products ${prod.name} image`}
-            className="rounded-lg object-cover w-full h-52"
+            className="rounded-lg object-cover w-full h-40 sm:h-48 md:h-52"
           />
-
-          <div className="space-y-2">
-            <h6>{prod.name}</h6>
-            <span className="font-normal text-lg text-gray100">
+          <div className="space-y-1 sm:space-y-2">
+            <h6 className="text-sm sm:text-base">{prod.name}</h6>
+            <span className="font-normal text-base sm:text-lg text-gray100">
               ${prod.price}/kg
             </span>
           </div>
-
-          <button className="rounded-lg py-3 w-full font-rubik font-normal text-lg text-custom-black border cursor-pointer hover:border-primary hover:bg-primary hover:text-white transition-all duration-200 mb-2">
+          <button className="rounded-lg py-2 sm:py-3 w-full font-rubik font-normal text-sm sm:text-lg text-custom-black border cursor-pointer hover:border-primary hover:bg-primary hover:text-white transition-all duration-200 mb-2">
             Add to cart
           </button>
         </div>
@@ -94,38 +93,38 @@ const ProductSection = () => {
           />
         </div>
 
-        <div className="flex items-center flex-col space-y-3">
-          <span className="text-custom-green bg-custom-green/10 py-1 px-3 rounded-[8px] font-rubik font-medium text-[20px]">
-            Our Products
+        <div className="flex items-center flex-col space-y-2 lg:space-y-3">
+          <Badge text="Our Products" />
+
+          <span className="font-rubik font-medium text-custom-black lg:text-[48px] text-[32px]">
+            Our Fresh Products
           </span>
 
-          <h2>Our Fresh Products</h2>
-
-          <span className="text-sm text-gray100 max-w-[448px] text-center">
+          <span className="text-sm text-gray100 max-w-[400px] lg:max-w-[448px] text-center">
             We pride ourselves on offering a wide variety of fresh and flavorful
             fruits, vegetables, and salad ingredients.
           </span>
         </div>
 
-        <Tabs defaultValue="all" className="mt-8">
-          <TabsList className="flex items-center space-x-3 md:space-x-6 bg-none mb-8">
+        <Tabs defaultValue="all" className="mt-6 md:mt-8">
+          <TabsList className="flex items-center space-x-4 md:space-x-6 bg-none mb-8">
             <TabsTrigger
-              className="rounded-[8px] py-3 px-6 border text-gray80 border-gray80 font-rubik text-lg hover:bg-custom-green transition-all duration-200 hover:text-white font-normal cursor-pointer hover:border-custom-green"
+              className="rounded-[8px] py-2 px-4 md:py-3 md:px-6 border text-gray80 border-gray80 font-rubik text-base md:text-lg hover:bg-custom-green transition-all duration-200 hover:text-white font-normal cursor-pointer hover:border-custom-green"
               value="all">
               All
             </TabsTrigger>
             <TabsTrigger
-              className="rounded-[8px] py-3 px-6 border text-gray80 border-gray80 font-rubik text-lg hover:bg-custom-green transition-all duration-200 hover:text-white font-normal cursor-pointer hover:border-custom-green"
+              className="rounded-[8px] py-2 px-4 md:py-3 md:px-6 border text-gray80 border-gray80 font-rubik text-base md:text-lg hover:bg-custom-green transition-all duration-200 hover:text-white font-normal cursor-pointer hover:border-custom-green"
               value="fruits">
               Fruits
             </TabsTrigger>
             <TabsTrigger
-              className="rounded-[8px] py-3 px-6 border text-gray80 border-gray80 font-rubik text-lg hover:bg-custom-green transition-all duration-200 hover:text-white font-normal cursor-pointer hover:border-custom-green"
+              className="rounded-[8px] py-2 px-4 md:py-3 md:px-6 border text-gray80 border-gray80 font-rubik text-base md:text-lg hover:bg-custom-green transition-all duration-200 hover:text-white font-normal cursor-pointer hover:border-custom-green"
               value="vegetables">
               Vegetables
             </TabsTrigger>
             <TabsTrigger
-              className="rounded-[8px] py-3 px-6 border text-gray80 border-gray80 font-rubik text-lg hover:bg-custom-green transition-all duration-200 hover:text-white font-normal cursor-pointer hover:border-custom-green"
+              className="rounded-[8px] py-2 px-4 md:py-3 md:px-6 border text-gray80 border-gray80 font-rubik text-base md:text-lg hover:bg-custom-green transition-all duration-200 hover:text-white font-normal cursor-pointer hover:border-custom-green"
               value="salad">
               Salad
             </TabsTrigger>

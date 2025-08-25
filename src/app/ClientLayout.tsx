@@ -9,7 +9,7 @@ export default function ClientLayout({ children }: { children: ReactNode }) {
   return (
     <Provider store={store}>
       <Navbar />
-      <main className="bg-gray50">{children}</main>
+      <main className="bg-white">{children}</main>
     </Provider>
   );
 }
