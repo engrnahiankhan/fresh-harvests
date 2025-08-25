@@ -51,7 +51,7 @@ const OfferSection = () => {
             {/* Heading */}
             <Badge text="Special Offer" />
 
-            <span className="font-rubik font-medium text-custom-black text-[40px] md:text-[60px] lg:text-[80px]">
+            <span className="font-rubik font-medium text-custom-black text-[40px] md:text-[60px] lg:text-[80px] mt-4">
               Seasonal Fruit Bundle
             </span>
 
