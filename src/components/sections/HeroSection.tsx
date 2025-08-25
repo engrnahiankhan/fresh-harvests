@@ -1,46 +1,90 @@
 "use client";
 import Image from "next/image";
+import Badge from "../ui/badge";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
     <div className="relative flex min-h-[1000px] items-center overflow-hidden">
       {/* Background Image */}
-      <div className="absolute inset-0 w-[1500px] h-full">
+      <div className="absolute inset-0">
         <Image
           src="/images/hero-bg.png"
           alt="Hero Background"
           fill
-          className="w-full object-cover"
+          className="w-full h-full object-cover object-center"
           priority
         />
       </div>
 
       {/* Content Container */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-left">
-          {/* Main Heading */}
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Perfect
-            </span>
-            <br />
-            <span className="text-white">Hero Section</span>
-          </h1>
+        <div className="text-left flex flex-col max-w-4xl">
+          <Badge text="Welcome to Fresh Harvest" />
 
-          {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl leading-relaxed">
-            Experience the future of web design with stunning visuals and modern
-            aesthetics.
+          <span className="font-rubik font-medium text-5xl md:text-6xl lg:text-7xl xl:text-[80px] text-custom-black leading-tight sm:leading-tight md:leading-tight lg:leading-none mt-4 mb-6">
+            Fresh Fruits and <br className="hidden sm:block" />
+            Vegetables
+          </span>
+
+          <p className="max-w-[448px] font-normal text-sm sm:text-base md:text-lg text-gray100 mb-6 sm:mb-8">
+            At Fresh Harvests, we are passionate about providing you with the
+            freshest and most flavorful fruits and vegetables.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4">
-            <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-full hover:shadow-lg transition-all duration-300">
-              Get Started
-            </button>
-            <button className="px-8 py-4 border-2 border-white text-white font-semibold rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300">
-              Learn More
-            </button>
+          <Link
+            href="#shop"
+            className="bg-primary rounded-[8px] py-3 px-6 sm:py-4 sm:px-8 font-semibold text-base sm:text-lg font-rubik hover:scale-105 hover:shadow-lg transition-all duration-300 text-white w-fit inline-block text-center">
+            Shop Now
+          </Link>
+        </div>
+
+        <div className="w-full">
+          <div
+            style={{
+              marginLeft: "110px",
+              marginTop: "10px",
+            }}>
+            <Image
+              src="/images/arrow.png"
+              alt="offer-card"
+              width={60}
+              height={160}
+            />
+          </div>
+
+          <div
+            style={{
+              marginLeft: "200px",
+              marginTop: "-80px",
+            }}>
+            <Image
+              src="/images/offer-card.png"
+              alt="offer-card"
+              width={330}
+              height={160}
+            />
+          </div>
+        </div>
+
+        <div className="mt-8">
+          <span className="font-normal text-sm text-gray100 text-left">
+            Download App:
+          </span>
+
+          <div className="flex items-center space-x-2 mt-1.5">
+            <Image
+              src="/images/appstore.png"
+              alt="app store"
+              width={100}
+              height={30}
+            />
+            <Image
+              src="/images/googleplay.png"
+              alt="google play"
+              width={100}
+              height={30}
+            />
           </div>
         </div>
       </div>
