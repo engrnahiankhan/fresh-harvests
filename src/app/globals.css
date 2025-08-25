@@ -253,3 +253,7 @@ h6 {
     @apply bg-background text-foreground;
   }
 }
+
+.slick-dots .slick-active div {
+  background-color: var(--color-custom-green) !important;
+}
