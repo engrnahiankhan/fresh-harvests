@@ -95,7 +95,7 @@ const TestimonialSection = () => {
           }}
         />
 
-        <div className="flex items-center flex-col space-y-2 lg:space-y-3">
+        <div className="flex items-center flex-col space-y-2 lg:space-y-3 text-center">
           <Badge text="Testimonial" />
 
           <span className="font-rubik text-center font-medium text-custom-black lg:text-[48px] text-[32px]">
