@@ -9,13 +9,11 @@ import React, { useEffect, useState } from "react";
 import ImageCarousel from "./ImageCarousel";
 import DescReview from "./DescReview";
 import RelatedProduct from "./RelatedProduct";
+import { useParams } from "next/navigation";
 
-interface ProductPageProps {
-  params: React.Usable<{ slug: string }>;
-}
-
-const ProductDetails = ({ params }: ProductPageProps) => {
-  const resolvedParams = React.use(params);
+const ProductDetails = () => {
+  const params = useParams();
+  const paramSlug = params?.slug;
 
   const dispatch = useAppDispatch();
   const { data, loading } = useAppSelector((state) => state.products);
@@ -27,13 +25,14 @@ const ProductDetails = ({ params }: ProductPageProps) => {
   }, [dispatch]);
 
   useEffect(() => {
+    if (!paramSlug) return;
     if (data && data.length > 0) {
       const foundProduct = data.find(
-        (item: Product) => item.slug === resolvedParams.slug
+        (item: Product) => item.slug === paramSlug
       );
       setProduct(foundProduct || null);
     }
-  }, [data, resolvedParams.slug]);
+  }, [data, paramSlug]);
 
   if (loading) {
     return (
@@ -59,9 +58,9 @@ const ProductDetails = ({ params }: ProductPageProps) => {
         <div className="w-full flex flex-col lg:flex-row items-center gap-8">
           <ImageCarousel product={product} />
 
-          <div className="flex flex-col space-y-3 lg:space-y-6 mt-12 lg:mt-0">
+          <div className="flex flex-col space-y-4 lg:space-y-6 mt-12 lg:mt-0">
             {/* product heading */}
-            <div className="flex flex-col space-y-2 mb-8">
+            <div className="flex flex-col space-y-2 mb-12">
               <Badge text={product.category} />
 
               <span className="font-rubik font-medium text-4xl md:text-[48px] text-custom-black">
