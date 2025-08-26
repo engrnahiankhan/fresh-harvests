@@ -68,13 +68,37 @@ const ProductDetails = ({ params }: ProductPageProps) => {
                 {product.name}
               </span>
 
-              <div className="flex items-baseline space-x-1 font-rubik font-medium">
-                <span className="md:text-lg">
-                  {product.rating ? product.rating.toFixed(1) : "0.0"}
-                </span>
-                <span className="text-xs text-custom-black">
-                  {`(${product.reviews.length} review)`}
-                </span>
+              <div className="flex items-center space-x-1 font-rubik font-medium">
+                <div className="flex items-center space-x-0.5">
+                  {[...Array(5)].map((_, index) => {
+                    const starValue = index + 1;
+                    const rating = product.rating || 0;
+
+                    return (
+                      <svg
+                        key={index}
+                        className={`w-4 h-4 ${
+                          starValue <= rating
+                            ? "text-[#FFB848] fill-current"
+                            : "text-gray-300"
+                        }`}
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                      </svg>
+                    );
+                  })}
+                </div>
+
+                <div className="flex items-baseline space-x-1">
+                  <span className="md:text-lg">
+                    {product.rating ? product.rating.toFixed(1) : "0.0"}
+                  </span>
+                  <span className="text-xs text-custom-black">
+                    {`(${product.reviews.length} review)`}
+                  </span>
+                </div>
               </div>
 
               <span className="font-rubik font-semibold text-primary text-2xl md:text-[32px]">
@@ -87,7 +111,7 @@ const ProductDetails = ({ params }: ProductPageProps) => {
             </div>
 
             {/* Product quantity adding */}
-            <div className="flex items-center space-x-3 mb-8">
+            <div className="flex items-center space-x-3 mb-6">
               <span className="font-rubik font-medium text-lg text-custom-black">
                 Quantity
               </span>
@@ -111,14 +135,14 @@ const ProductDetails = ({ params }: ProductPageProps) => {
             <div className="flex items-center space-x-4">
               <button className="md:py-4 md:px-8 py-3 px-6 bg-gray20 rounded flex items-center space-x-2 text-gray100 cursor-pointer hover:shadow-lg transition-shadow duration-200">
                 <Heart className="w-5" />
-                <span className="font-rubik font-semibold text-lg">
+                <span className="font-rubik font-semibold md:text-lg text-base">
                   Save as favorite
                 </span>
               </button>
 
               <button className="md:py-4 md:px-8 py-3 px-6 bg-primary rounded flex items-center space-x-2 text-white cursor-pointer hover:shadow-lg transition-shadow duration-200">
                 <ShoppingCart className="w-5" />
-                <span className="font-rubik font-semibold text-lg">
+                <span className="font-rubik font-semibold md:text-lg text-base">
                   Add to carts
                 </span>
               </button>
