@@ -22,7 +22,7 @@ const HeroSection = () => {
         <div className="text-left flex flex-col max-w-4xl">
           <Badge text="Welcome to Fresh Harvest" />
 
-          <span className="font-rubik font-medium text-5xl md:text-6xl lg:text-7xl xl:text-[80px] text-custom-black leading-tight sm:leading-tight md:leading-tight lg:leading-none mt-4 mb-6">
+          <span className="font-rubik font-medium text-4xl md:text-5xl lg:text-7xl xl:text-[80px] text-custom-black leading-tight sm:leading-tight md:leading-tight lg:leading-none mt-4 mb-6">
             Fresh Fruits and <br className="hidden sm:block" />
             Vegetables
           </span>

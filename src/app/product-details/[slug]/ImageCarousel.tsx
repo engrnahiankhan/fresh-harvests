@@ -47,7 +47,7 @@ const ImageCarousel = ({ product }: ImageCarouselProps) => {
     dotsClass: "slick-dots flex justify-center items-center",
   };
   return (
-    <div className="rounded-lg h-[550px] w-[550px] max-w-full">
+    <div className="rounded-lg h-[550px] w-[550px] max-w-full pt-24 lg:pt-0">
       <Slider {...settings}>
         {product.images.map((img, index) => (
           <div key={index} className="relative w-full h-[550px]">

@@ -58,7 +58,7 @@ const ProductDetails = () => {
         <div className="w-full flex flex-col lg:flex-row items-center gap-8">
           <ImageCarousel product={product} />
 
-          <div className="flex flex-col space-y-4 lg:space-y-6 mt-12 lg:mt-0">
+          <div className="flex flex-col space-y-4 lg:space-y-6 pt-32 lg:pt-0">
             {/* product heading */}
             <div className="flex flex-col space-y-2 mb-12">
               <Badge text={product.category} />

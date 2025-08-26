@@ -252,9 +252,9 @@ const Footer = () => {
                 href="https://www.google.com/maps?q=Dhaka,Bangladesh"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-custom-green inline-flex items-center transition-all duration-200">
-                <MapIcon className="w-4 h-4 mr-1.5 text-custom-green" /> Tanjung
-                Sari Street, Pontianak, Indonesia
+                className="hover:text-custom-green inline-flex items-baseline-lasts transition-all duration-200">
+                <MapIcon className="w-4 min-w-4 min-h-4 h-4 mr-1.5 text-custom-green" />{" "}
+                Tanjung Sari Street, Pontianak, Indonesia
               </Link>
             </div>
           </div>
