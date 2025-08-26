@@ -131,15 +131,15 @@ const ProductDetails = () => {
             </div>
 
             {/* save favorites and add to cart action button */}
-            <div className="flex items-center space-x-4">
-              <button className="md:py-4 md:px-8 py-3 px-6 bg-gray20 rounded flex items-center space-x-2 text-gray100 cursor-pointer hover:shadow-lg transition-shadow duration-200">
+            <div className="flex flex-col md:flex-row items-center gap-4 w-full">
+              <button className="md:py-4 md:px-8 py-3 px-6 bg-gray20 rounded flex items-center space-x-2 text-gray100 cursor-pointer hover:shadow-lg transition-shadow duration-200 w-full">
                 <Heart className="w-5" />
                 <span className="font-rubik font-semibold md:text-lg text-base">
                   Save as favorite
                 </span>
               </button>
 
-              <button className="md:py-4 md:px-8 py-3 px-6 bg-primary rounded flex items-center space-x-2 text-white cursor-pointer hover:shadow-lg transition-shadow duration-200">
+              <button className="md:py-4 md:px-8 py-3 px-6 bg-primary rounded flex items-center space-x-2 text-white cursor-pointer hover:shadow-lg transition-shadow duration-200 w-full">
                 <ShoppingCart className="w-5" />
                 <span className="font-rubik font-semibold md:text-lg text-base">
                   Add to carts
