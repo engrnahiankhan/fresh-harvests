@@ -9,6 +9,8 @@ import Image from "next/image";
 import logo from "../../../public/images/logo.png";
 import Link from "next/link";
 import { useParams } from "next/navigation";
+import SignInModal from "../shared/SignInModal";
+import RegisterModal from "../shared/RegisterModal";
 const navigationLinks = [
   { name: "Home", href: "" },
   { name: "Shop", href: "shop" },
@@ -21,6 +23,9 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeLink, setActiveLink] = useState("Home");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const [isSignInOpen, setSignInOpen] = useState(false);
+  const [isRegisterOpen, setRegisterOpen] = useState(false);
 
   console.log("check params:", params.slug);
 
@@ -88,7 +93,9 @@ export function Navbar() {
                 <span>Cart</span>
               </button>
 
-              <button className="p-2 flex text-sm items-center space-x-2 cursor-pointer font-rubik font-semibold border rounded px-4 py-2 text-custom-black border-custom-black">
+              <button
+                onClick={() => setSignInOpen(true)}
+                className="p-2 flex text-sm items-center space-x-2 cursor-pointer font-rubik font-semibold border rounded px-4 py-2 text-custom-black border-custom-black">
                 <span>Sign in</span>
               </button>
             </div>
@@ -121,6 +128,7 @@ export function Navbar() {
               </button>
 
               <button
+                onClick={() => setSignInOpen(true)}
                 className={cn(
                   "p-2 flex text-sm items-center space-x-2 cursor-pointer font-rubik font-semibold border rounded px-4 py-2",
                   isScrolled
@@ -196,6 +204,20 @@ export function Navbar() {
           </div>
         </div>
       </div>
+
+      {/* Sign In Modal */}
+      <SignInModal
+        isOpen={isSignInOpen}
+        onClose={() => setSignInOpen(false)}
+        onSwitchToRegister={() => setRegisterOpen(true)}
+      />
+
+      {/* Register Modal */}
+      <RegisterModal
+        isOpen={isRegisterOpen}
+        onClose={() => setRegisterOpen(false)}
+        onSwitchToSignIn={() => setSignInOpen(true)}
+      />
     </nav>
   );
 }
