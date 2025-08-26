@@ -148,56 +148,81 @@ export function Navbar() {
                   <span className="sr-only">Open menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="left" className="w-80">
-                <div className="flex flex-col space-y-6 mt-6">
+              <SheetContent
+                side="left"
+                className="w-80 !z-[2500] p-6 flex flex-col justify-between">
+                <div>
                   {/* Mobile Logo */}
-                  <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                      <span className="text-primary-foreground font-bold text-sm">
-                        L
-                      </span>
-                    </div>
-                    <span className="text-lg font-semibold">Logo</span>
+                  <div className="flex items-center mb-6">
+                    <Link href="/" className="flex items-center space-x-2">
+                      <Image
+                        alt="Logo"
+                        src={logo}
+                        width={40}
+                        className="w-[40px]"
+                      />
+                      <h5 className="text-lg font-semibold">Fresh Harvests</h5>
+                    </Link>
                   </div>
 
                   {/* Mobile Navigation Links */}
-                  <div className="flex flex-col space-y-4">
+                  <div className="flex flex-col space-y-2">
                     {navigationLinks.map((link) => (
-                      <button
+                      <Link
                         key={link.name}
+                        href={params.slug ? `/#${link.href}` : `#${link.href}`}
                         onClick={() => {
                           setActiveLink(link.name);
                           setIsMobileMenuOpen(false);
                         }}
                         className={cn(
-                          "text-left px-4 py-3 rounded-lg text-base font-medium transition-colors duration-200",
+                          "relative px-4 py-3 text-base font-normal text-gray-700 transition-colors duration-200 group rounded-lg",
                           activeLink === link.name
-                            ? "bg-primary text-primary-foreground"
-                            : "text-foreground hover:bg-accent hover:text-accent-foreground"
+                            ? "font-semibold text-black"
+                            : "hover:text-black"
                         )}>
                         {link.name}
-                      </button>
+                        {/* Active underline */}
+                        <span
+                          className={cn(
+                            "absolute bottom-0 left-6 h-0.5 bg-custom-green rounded-[10px] transition-all duration-300 ease-out",
+                            activeLink === link.name
+                              ? "w-[14px] -translate-x-1/2"
+                              : "w-0 group-hover:w-full -translate-x-1/2"
+                          )}
+                        />
+                      </Link>
                     ))}
                   </div>
+                </div>
 
-                  {/* Mobile Actions */}
-                  <div className="flex flex-col space-y-3 pt-6 border-t">
-                    <Button variant="ghost" className="justify-start">
-                      <Heart className="h-5 w-5 mr-3" />
-                      Favorites
-                    </Button>
-                    <Button variant="ghost" className="justify-start">
-                      <ShoppingCart className="h-5 w-5 mr-3" />
-                      Cart
-                      <span className="ml-auto bg-primary text-primary-foreground text-xs px-2 py-1 rounded-full">
-                        2
-                      </span>
-                    </Button>
-                    <Button className="justify-start mt-4">
-                      <User className="h-4 w-4 mr-3" />
-                      Sign In
-                    </Button>
-                  </div>
+                {/* Mobile Actions */}
+                <div className="flex flex-col space-y-3 pt-6 border-t border-gray-200">
+                  <Button
+                    variant="ghost"
+                    className="justify-start"
+                    onClick={() => setIsMobileMenuOpen(false)}>
+                    <Heart className="h-5 w-5 mr-3 text-custom-green" />
+                    Favorites
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    className="justify-start"
+                    onClick={() => setIsMobileMenuOpen(false)}>
+                    <ShoppingCart className="h-5 w-5 mr-3 text-custom-green" />
+                    Cart
+                    <span className="ml-auto bg-red-500 text-white text-xs px-2 py-1 rounded-full">
+                      3
+                    </span>
+                  </Button>
+                  <Button
+                    className="font-rubik font-medium text-base text-white mt-4"
+                    onClick={() => {
+                      setSignInOpen(true);
+                      setIsMobileMenuOpen(false);
+                    }}>
+                    Sign In
+                  </Button>
                 </div>
               </SheetContent>
             </Sheet>

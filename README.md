@@ -6,7 +6,7 @@
 
 ## Demo
 
-[https://fresh-harvests.vercel.app](https://fresh-harvests.vercel.app)
+[https://fresh-harvests.netlify.app/](https://fresh-harvests.netlify.app/)
 
 ---
 

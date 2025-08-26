@@ -179,7 +179,7 @@ const Footer = () => {
           {/* Quick Links + Contact (row) */}
           <div className="flex flex-row justify-between w-full">
             {/* Quick links 1 */}
-            <div className="flex flex-col space-y-1.5 text-xs">
+            <div className="flex flex-col space-y-1.5 text-xs w-full">
               <h6 className="!font-medium !text-sm">Quick links 1</h6>
               <Link
                 href={params.slug ? "/" : "#"}
@@ -209,7 +209,7 @@ const Footer = () => {
             </div>
 
             {/* Quick links 2 */}
-            <div className="flex flex-col space-y-1.5 text-xs">
+            <div className="flex flex-col space-y-1.5 text-xs w-full">
               <h6 className="!font-medium !text-sm">Quick links 2</h6>
               <Link
                 href="#"
@@ -234,7 +234,7 @@ const Footer = () => {
             </div>
 
             {/* Contact */}
-            <div className="flex flex-col space-y-1.5 text-xs">
+            <div className="flex flex-col space-y-1.5 text-xs w-full">
               <h6 className="!font-medium !text-sm">Contact us</h6>
               <Link
                 href="tel:023985433"
