@@ -32,7 +32,9 @@ const OurBlog = () => {
     },
   ];
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:pb-26">
+    <div
+      className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:pb-26"
+      id="blog">
       <div className="flex justify-end relative top-28 right-28">
         <div
           className="md:block hidden"

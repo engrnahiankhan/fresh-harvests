@@ -11,8 +11,10 @@ import {
 import logo from "../../../public/images/logo.png";
 import Image from "next/image";
 import Link from "next/link";
+import { useParams } from "next/navigation";
 
 const Footer = () => {
+  const params = useParams();
   return (
     <div className="w-full bg-gray20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -20,7 +22,9 @@ const Footer = () => {
         <div className="hidden md:flex items-start justify-between pt-12">
           {/* Logo */}
           <div className="flex flex-col justify-between w-full h-52">
-            <Link href="#" className="flex items-center space-x-2">
+            <Link
+              href={params.slug ? "/" : "#"}
+              className="flex items-center space-x-2">
               <Image alt="Logo" src={logo} width={40} className="w-[40px]" />
               <h5>Fresh Harvests</h5>
             </Link>
@@ -52,27 +56,27 @@ const Footer = () => {
             <h6>Quick links 1</h6>
             <div className="flex flex-col space-y-3 text-gray100 font-normal text-sm">
               <Link
-                href="#"
+                href={params.slug ? "/" : "#"}
                 className="hover:text-custom-green transition-all duration-200">
                 Home
               </Link>
               <Link
-                href="#shop"
+                href={params.slug ? "/#shop" : "#shop"}
                 className="hover:text-custom-green transition-all duration-200">
                 Shop
               </Link>
               <Link
-                href="#about-us"
+                href={params.slug ? "/#about" : "#about"}
                 className="hover:text-custom-green transition-all duration-200">
                 About us
               </Link>
               <Link
-                href="#blog"
+                href={params.slug ? "/#blog" : "#blog"}
                 className="hover:text-custom-green transition-all duration-200">
                 Blog
               </Link>
               <Link
-                href="#offer"
+                href={params.slug ? "/#offer" : "#offer"}
                 className="hover:text-custom-green transition-all duration-200">
                 Special Offer
               </Link>
@@ -84,12 +88,12 @@ const Footer = () => {
             <h6>Quick links 2</h6>
             <div className="flex flex-col space-y-3 text-gray100 font-normal text-sm">
               <Link
-                href="#"
+                href={params.slug ? "/" : "#"}
                 className="hover:text-custom-green transition-all duration-200">
                 Favorites
               </Link>
               <Link
-                href="#"
+                href={params.slug ? "/" : "#"}
                 className="hover:text-custom-green transition-all duration-200">
                 Cart
               </Link>
@@ -112,19 +116,21 @@ const Footer = () => {
               <h6>Contact us</h6>
               <div className="flex flex-col space-y-3 text-gray100 font-normal text-sm">
                 <Link
-                  href="#"
+                  href="tel:023985433"
                   className="hover:text-custom-green inline-flex items-center transition-all duration-200">
                   <PhoneCall className="w-5 h-5 mr-2 text-custom-green" /> 023
                   985 433
                 </Link>
                 <Link
-                  href="#"
+                  href="mailto: freshharvests@gmail.com"
                   className="hover:text-custom-green inline-flex items-center transition-all duration-200">
                   <MailIcon className="w-5 h-5 mr-2 text-custom-green" />{" "}
                   freshharvests@gmail.com
                 </Link>
                 <Link
-                  href="#"
+                  href="https://www.google.com/maps?q=Dhaka,Bangladesh"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="hover:text-custom-green inline-flex transition-all duration-200">
                   <MapIcon className="w-5 h-5 mr-2 text-custom-green" /> Tanjung
                   Sari Street, Pontianak, Indonesia
@@ -163,10 +169,12 @@ const Footer = () => {
         {/* Mobile Layout (new, stacked order) */}
         <div className="flex flex-col md:hidden pt-10 space-y-6 w-full">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <Link
+            href={params.slug ? "/" : "#"}
+            className="flex items-center space-x-2">
             <Image alt="Logo" src={logo} width={32} className="w-[32px]" />
             <h5 className="text-sm font-semibold">Fresh Harvests</h5>
-          </div>
+          </Link>
 
           {/* Quick Links + Contact (row) */}
           <div className="flex flex-row justify-between w-full">
@@ -174,27 +182,27 @@ const Footer = () => {
             <div className="flex flex-col space-y-1.5 text-xs">
               <h6 className="!font-medium !text-sm">Quick links 1</h6>
               <Link
-                href="#"
+                href={params.slug ? "/" : "#"}
                 className="hover:text-custom-green transition-all duration-200">
                 Home
               </Link>
               <Link
-                href="#shop"
+                href={params.slug ? "/#shop" : "#shop"}
                 className="hover:text-custom-green transition-all duration-200">
                 Shop
               </Link>
               <Link
-                href="#about-us"
+                href={params.slug ? "/#about" : "#about"}
                 className="hover:text-custom-green transition-all duration-200">
                 About us
               </Link>
               <Link
-                href="#blog"
+                href={params.slug ? "/#blog" : "#blog"}
                 className="hover:text-custom-green transition-all duration-200">
                 Blog
               </Link>
               <Link
-                href="#offer"
+                href={params.slug ? "/#offer" : "#offer"}
                 className="hover:text-custom-green transition-all duration-200">
                 Special Offer
               </Link>
@@ -229,19 +237,21 @@ const Footer = () => {
             <div className="flex flex-col space-y-1.5 text-xs">
               <h6 className="!font-medium !text-sm">Contact us</h6>
               <Link
-                href="#"
+                href="tel:023985433"
                 className="hover:text-custom-green inline-flex items-center transition-all duration-200">
                 <PhoneCall className="w-4 h-4 mr-1.5 text-custom-green" /> 023
                 985 433
               </Link>
               <Link
-                href="#"
+                href="mailto: freshharvests@gmail.com"
                 className="hover:text-custom-green inline-flex items-center transition-all duration-200">
                 <MailIcon className="w-4 h-4 mr-1.5 text-custom-green" />{" "}
                 freshharvests@gmail.com
               </Link>
               <Link
-                href="#"
+                href="https://www.google.com/maps?q=Dhaka,Bangladesh"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-custom-green inline-flex items-center transition-all duration-200">
                 <MapIcon className="w-4 h-4 mr-1.5 text-custom-green" /> Tanjung
                 Sari Street, Pontianak, Indonesia

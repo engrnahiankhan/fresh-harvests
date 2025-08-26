@@ -5,7 +5,7 @@ import Badge from "../ui/badge";
 
 const AboutSection = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="about">
       <div className="flex justify-center">
         <button className="rounded-[8px] border border-primary py-3 px-6 md:py-4 md:px-8 text-primary font-rubik font-semibold text-base md:text-lg hover:bg-primary hover:text-white transition-all duration-200 cursor-pointer z-[1000]">
           See All Products

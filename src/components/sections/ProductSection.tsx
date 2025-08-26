@@ -75,7 +75,7 @@ const ProductSection = () => {
 
   return (
     <div className="w-full bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="shop">
         <div className="flex justify-between pt-8">
           <div
             style={{

@@ -43,7 +43,8 @@ const OfferSection = () => {
       className="min-h-[640px] w-full bg-cover bg-center bg-no-repeat relative"
       style={{
         backgroundImage: `url('/images/footer-bg.png')`,
-      }}>
+      }}
+      id="offer">
       {/* Content Container */}
       <div className="relative z-10 h-full min-h-[640px] flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
