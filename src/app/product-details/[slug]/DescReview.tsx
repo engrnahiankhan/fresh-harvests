@@ -7,7 +7,7 @@ interface DescReviewsProps {
 }
 const DescReview = ({ product }: DescReviewsProps) => {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-26">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 md:pt-28">
       <div className="flex justify-start">
         <Tabs defaultValue="desc">
           <TabsList className="flex items-center justify-start space-x-4 md:space-x-6 bg-none mb-8">

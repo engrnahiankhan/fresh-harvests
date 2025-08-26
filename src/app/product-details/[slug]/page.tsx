@@ -8,6 +8,7 @@ import { Heart, Loader2, ShoppingCart } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import ImageCarousel from "./ImageCarousel";
 import DescReview from "./DescReview";
+import RelatedProduct from "./RelatedProduct";
 
 interface ProductPageProps {
   params: React.Usable<{ slug: string }>;
@@ -53,22 +54,22 @@ const ProductDetails = ({ params }: ProductPageProps) => {
   if (!product) return null;
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:py-28">
       <div className="">
-        <div className="w-full flex items-center gap-8">
+        <div className="w-full flex flex-col lg:flex-row items-center gap-8">
           <ImageCarousel product={product} />
 
-          <div className="flex flex-col space-y-6">
+          <div className="flex flex-col space-y-3 lg:space-y-6 mt-12 lg:mt-0">
             {/* product heading */}
-            <div className="flex flex-col space-y-2">
+            <div className="flex flex-col space-y-2 mb-8">
               <Badge text={product.category} />
 
-              <span className="font-rubik font-medium text-[48px] text-custom-black">
+              <span className="font-rubik font-medium text-4xl md:text-[48px] text-custom-black">
                 {product.name}
               </span>
 
               <div className="flex items-baseline space-x-1 font-rubik font-medium">
-                <span className="text-lg">
+                <span className="md:text-lg">
                   {product.rating ? product.rating.toFixed(1) : "0.0"}
                 </span>
                 <span className="text-xs text-custom-black">
@@ -76,17 +77,17 @@ const ProductDetails = ({ params }: ProductPageProps) => {
                 </span>
               </div>
 
-              <span className="font-rubik font-semibold text-primary text-[32px]">
+              <span className="font-rubik font-semibold text-primary text-2xl md:text-[32px]">
                 ${product.price}/kg
               </span>
 
-              <p className="font-normal text-gray100 text-lg">
+              <p className="font-normal text-gray100 text-base leading-relaxed md:text-lg">
                 {product.description}
               </p>
             </div>
 
             {/* Product quantity adding */}
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center space-x-3 mb-8">
               <span className="font-rubik font-medium text-lg text-custom-black">
                 Quantity
               </span>
@@ -108,14 +109,14 @@ const ProductDetails = ({ params }: ProductPageProps) => {
 
             {/* save favorites and add to cart action button */}
             <div className="flex items-center space-x-4">
-              <button className="py-4 px-8 bg-gray20 rounded flex items-center space-x-2 text-gray100 cursor-pointer hover:shadow-lg transition-shadow duration-200">
+              <button className="md:py-4 md:px-8 py-3 px-6 bg-gray20 rounded flex items-center space-x-2 text-gray100 cursor-pointer hover:shadow-lg transition-shadow duration-200">
                 <Heart className="w-5" />
                 <span className="font-rubik font-semibold text-lg">
                   Save as favorite
                 </span>
               </button>
 
-              <button className="py-4 px-8 bg-primary rounded flex items-center space-x-2 text-white cursor-pointer hover:shadow-lg transition-shadow duration-200">
+              <button className="md:py-4 md:px-8 py-3 px-6 bg-primary rounded flex items-center space-x-2 text-white cursor-pointer hover:shadow-lg transition-shadow duration-200">
                 <ShoppingCart className="w-5" />
                 <span className="font-rubik font-semibold text-lg">
                   Add to carts
@@ -126,6 +127,8 @@ const ProductDetails = ({ params }: ProductPageProps) => {
         </div>
 
         <DescReview product={product} />
+
+        <RelatedProduct product={product} />
       </div>
     </div>
   );

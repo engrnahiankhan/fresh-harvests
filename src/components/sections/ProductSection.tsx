@@ -60,7 +60,12 @@ const ProductSection = () => {
               ${prod.price}/kg
             </span>
           </div>
-          <button className="rounded-lg py-2 sm:py-3 w-full font-rubik font-normal text-sm sm:text-lg text-custom-black border cursor-pointer hover:border-primary hover:bg-primary hover:text-white transition-all duration-200 mb-2">
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+            }}
+            className="rounded-lg py-2 sm:py-3 w-full font-rubik font-normal text-sm sm:text-lg text-custom-black border cursor-pointer hover:border-primary hover:bg-primary hover:text-white transition-all duration-200 mb-2">
             Add to cart
           </button>
         </Link>
